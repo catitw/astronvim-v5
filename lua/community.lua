@@ -65,9 +65,6 @@ local community = {
     ["heirline-tabline-buffer-number"] = {},
     neovide = {},
   },
-  register = {
-    ["nvim-neoclip-lua"] = {},
-  },
   scrolling = {
     ["mini-animate"] = {},
   },
