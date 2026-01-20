@@ -3,6 +3,9 @@
 -- This guarantees that the specs are processed before any user plugins.
 
 local community = {
+  colorscheme = {
+    catppuccin = {},
+  },
   pack = {
     lua = {},
   },
