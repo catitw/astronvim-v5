@@ -25,6 +25,9 @@
           buildInputs = with pkgs; [
             gnumake
           ];
+
+          # [marksman issue](https://stackoverflow.com/a/69685330)
+          DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = 1;
         };
       }
     );
