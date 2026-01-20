@@ -1,34 +1,62 @@
-# AstroNvim Template
+# AstroNvim Config
 
 **NOTE:** This is for AstroNvim v5+
 
-A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+Getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
 ## 🛠️ Installation
 
-#### Make a backup of your current nvim and shared folder
+clone the repository:
 
 ```shell
-mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
-mv ~/.local/state/nvim ~/.local/state/nvim.bak
-mv ~/.cache/nvim ~/.cache/nvim.bak
+git clone https://github.com/catitw/astronvim-v5.git ~/.config/nvim
 ```
 
-#### Create a new user repository from this template
+## Notes
 
-Press the "Use this template" button above to create a new repository to store your user configuration.
+### Configure AstroNvim Plugins
 
-You can also just clone this repository directly if you do not want to track your user configuration in GitHub.
+> see aslo [Astronvim Documentation](https://docs.astronvim.com/configuration/customizing_plugins)
 
-#### Clone the repository
+- extend the `table`:
 
-```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
-```
+  ```lua
+  {
+    "AstroNvim/astrocore",
+    ---@type AstroCoreOpts
+    opts = { -- extend the plugin options
+      diagnostics = {
+        -- disable diagnostics virtual text
+        virtual_text = false,
+      },
+    },
+  },
+  ```
 
-#### Start Neovim
+- extend the `list`:
 
-```shell
-nvim
+  ```lua
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      -- list like portions of a table cannot be merged naturally and require the user to merge it manually
+      -- check to make sure the key exists
+      if not opts.ensure_installed then
+        opts.ensure_installed = {}
+      end
+      vim.list_extend(opts.ensure_installed, {
+        "lua",
+        "vim",
+        -- add more arguments for adding more treesitter parsers
+      })
+    end,
+  },
+  ```
+
+### Disable plugin
+
+```lua
+return {
+  { "max397574/better-escape.nvim", enabled = false },
+}
 ```
