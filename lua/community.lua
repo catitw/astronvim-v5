@@ -6,8 +6,80 @@ local community = {
   colorscheme = {
     catppuccin = {},
   },
+  ["editing-support"] = {
+    ["suda-vim"] = {},
+  },
+  ["fuzzy-finder"] = {
+    ["fzf-lua"] = {},
+    ["namu-nvim"] = {},
+  },
   pack = {
+    bash = {},
+    cmake = {},
+    cpp = {},
+    docker = {},
+    fish = {},
+    go = {},
+    ["html-css"] = {},
+    hyprlang = {},
+    java = {},
+    jj = {},
+    json = {},
+    just = {},
+    kotlin = {},
     lua = {},
+    markdown = {},
+    moonbit = {},
+    nginx = {},
+    nix = {},
+    nushell = {},
+    prettier = {},
+    python = {},
+    ["rainbow-delimiter-indent-blankline"] = {},
+    rust = {},
+    ["spring-boot"] = {},
+    sql = {},
+    tailwindcss = {},
+    typescript = {},
+    typst = {},
+    verilog = {},
+    vue = {},
+    wgsl = {},
+    xml = {},
+    yaml = {},
+    zig = {},
+  },
+  motion = {
+    ["flash-nvim"] = {
+      -- `s` to enter flash mode
+    },
+    ["mini-move"] = {
+      -- alt + hjkl to move selection
+    },
+  },
+  recipes = {
+    ["astrolsp-no-insert-inlay-hints"] = {},
+    ["auto-session-restore"] = {},
+    ["heirline-clock-statusline"] = {},
+    ["heirline-mode-text-statusline"] = {},
+    ["heirline-tabline-buffer-number"] = {},
+    neovide = {},
+  },
+  register = {
+    ["nvim-neoclip-lua"] = {},
+  },
+  scrolling = {
+    ["mini-animate"] = {},
+  },
+  startup = {
+    ["mini-starter"] = {},
+  },
+  ["terminal-integration"] = {
+    ["flatten-nvim"] = {},
+  },
+  utility = {
+    ["live-preview"] = {},
+    ["nvzone-menu"] = {},
   },
 }
 
