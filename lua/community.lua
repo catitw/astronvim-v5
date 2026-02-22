@@ -59,7 +59,7 @@ local community = {
   },
   recipes = {
     ["astrolsp-no-insert-inlay-hints"] = {},
-    -- ["auto-session-restore"] = {}, -- this conflict with `snacks.dashboard`
+    ["auto-session-restore"] = false, -- this conflict with `snacks.dashboard`
     ["heirline-clock-statusline"] = {},
     ["heirline-mode-text-statusline"] = {},
     ["heirline-tabline-buffer-number"] = {},
@@ -69,7 +69,7 @@ local community = {
     ["mini-animate"] = {},
   },
   startup = {
-    ["mini-starter"] = {},
+    ["mini-starter"] = false,
   },
   ["terminal-integration"] = {
     ["flatten-nvim"] = {},
@@ -95,8 +95,8 @@ local function to_lazy_spec(community_table)
       if type(value) == "table" and next(value) ~= nil then
         -- Non-empty table: nested node, continue traversing
         traverse(value, current_path)
-      else
-        -- Empty table or non-table value: leaf node, create the import spec
+      elseif value ~= false then
+        -- Empty table or non-table value (except false): leaf node, create the import spec
         table.insert(spec, { import = current_path })
       end
     end
