@@ -59,7 +59,7 @@ local community = {
   },
   recipes = {
     ["astrolsp-no-insert-inlay-hints"] = {},
-    ["auto-session-restore"] = {},
+    -- ["auto-session-restore"] = {}, -- this conflict with `snacks.dashboard`
     ["heirline-clock-statusline"] = {},
     ["heirline-mode-text-statusline"] = {},
     ["heirline-tabline-buffer-number"] = {},
