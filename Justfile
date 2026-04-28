@@ -23,7 +23,12 @@ up:
 lazy-check:
   nvim -c "lua require('lazy').check()"
 
-# `:Lazy sync`, to update and clean plugins
+# `:Lazy update`, to update plugins
+[group('plugin')]
+lazy-update:
+  nvim -c "lua require('lazy').update()"
+
+# `:Lazy sync`, to sync and clean plugins
 [group('plugin')]
 lazy-sync:
   nvim -c "lua require('lazy').sync()"
