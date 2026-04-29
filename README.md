@@ -60,3 +60,11 @@ return {
   { "max397574/better-escape.nvim", enabled = false },
 }
 ```
+
+### Frequently Used Lua apis
+
+#### Show messages
+
+```nvim
+:messages
+```
