@@ -18,25 +18,16 @@ up:
 
 # ------------------------ Plugin --------------------------
 
-# `:Lazy check`, to check for plugin updates
+# `:AstroUpdate`, to update both Neovim plugins and Mason packages
 [group('plugin')]
-lazy-check:
-  nvim -c "lua require('lazy').check()"
+astro-update:
+  nvim -c "AstroUpdate"
 
-# `:Lazy update`, to update plugins
-[group('plugin')]
-lazy-update:
-  nvim -c "lua require('lazy').update()"
 
 # `:Lazy sync`, to sync and clean plugins
 [group('plugin')]
 lazy-sync:
   nvim -c "lua require('lazy').sync()"
-
-# `:AstroUpdate`, to update both Neovim plugins and Mason packages
-[group('plugin')]
-astro-update:
-  nvim -c "AstroUpdate"
 
 # ------------------------ Neovim --------------------------
 
