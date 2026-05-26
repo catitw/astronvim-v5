@@ -1,9 +1,7 @@
--- Customize Mason
-
 ---@type LazySpec
 return {
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       -- https://github.com/mason-org/mason.nvim#default-configuration
       PATH = "append",
@@ -19,13 +17,13 @@ return {
   --     ensure_installed = {
   --       -- install language servers
   --       "lua-language-server",
-  --
+
   --       -- install formatters
   --       "stylua",
-  --
+
   --       -- install debuggers
   --       "debugpy",
-  --
+
   --       -- install any other package
   --       "tree-sitter-cli",
   --     },
